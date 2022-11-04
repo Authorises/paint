@@ -121,7 +121,7 @@ io.on('connection', (socket) => {
   socket.on('paint', (a,b) => {
     if(authenticated.includes(socket)){
       if(ratelimit.has(socket)){
-        if(ratelimit.get(socket)+300>new Date().getTime()){
+        if(ratelimit.get(socket)+250>new Date().getTime()){
           socket.emit('paint', a, d[a])
           return;
         }
