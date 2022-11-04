@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>game</title>
+    <style>
+        :root {
+  --grid-cols: 1;
+  --grid-rows: 1;
+}
+
+body {
+  background-color:#000000;
+  color:#ffffff;
+}
+      
+#container {
+  display: grid;
+  grid-template-rows: repeat(var(--grid-rows), 0fr);
+  grid-template-columns: repeat(var(--grid-cols), 0fr);
+}
+
+#colorss {
+  display: grid;
+  grid-template-rows: repeat(var(--grid-rows), 0fr);
+  grid-template-columns: repeat(var(--grid-cols), 0fr);
+}
+
+.grid-item {
+  height: 30px;
+  width:30px;
+  border: 1px solid #ddd;
+  text-align: center;
+}
+
+.grid-item-plain {
+  height: 30px;
+  width:30px;
+  text-align: center;
+}
+
+      #all{
+    display: inline-block;
+    width: 100%;
+}
+
+    </style>
+  <script src="https://www.google.com/recaptcha/enterprise.js?render=6LddcH0iAAAAAL0VZq3yeOm2Bvo9vGOioMX5qRGh"></script>
+  </head>
+  <body style="padding: 20px">
+    <script src="/socket.io/socket.io.js"></script>
+      <div id="all">
+        <div style="border-radius:50; float: left; margin-right: 10px; border: 2px solid black;height:100%; padding:5px">
+          <div style="">
+            <h1>teams</h1>
+            NEW ANTICHEAT!
+            <div id="colors">
+              Loading Teams...
+            </div>
+            <div id="colorsspecial">
+        
+            </div>
+          </div>
+          <hr/>
+          <div style="">
+            <h1>online users  (<span id="online">...</span>)</h1>
+            <div id="online-list">
+              
+            </div>
+          </div>
+        </div>
+        <div style="border: 2px solid black; width:100%">
+          <h1>map <span id="click">(click on a square)</span></h1>
+          <div id="container">
+            Loading Map...
+          </div>
+        </div>
+      </div>
+
+  </body>
+      <script src="frontend.js"></script>
+</html>
