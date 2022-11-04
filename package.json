@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "echo \"Error: no test specified\" && exit 1",
+    "build": "Built",
     "start":"node ."
   },
   "keywords": [],
