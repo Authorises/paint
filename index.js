@@ -58,6 +58,10 @@ app.get('/frontend.js', (req, res) => {
   res.sendFile(__dirname + '/frontend.js');
 });
 
+app.get('/socket.io.js', (req, res) => {
+  res.sendFile(__dirname + '/socket.io.js');
+});
+
 app.get('/colors', (req, res) => {
   res.send({"colors":colors})
 })
